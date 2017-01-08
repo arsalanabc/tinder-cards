@@ -169,3 +169,8 @@ select {
   padding:1.2rem 0;
 
 }
+
+.popup{
+    width: 450px !important;
+    margin-left: -230px !important;
+}
