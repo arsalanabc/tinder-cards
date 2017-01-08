@@ -1,0 +1,76 @@
+<!--<ion-view title='<img src="../img/phonegap_wings.png" width="32" height="32">PhoneGap Day 2014'>-->
+<ion-view title="Session Schedule">
+  <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-more" ng-click="showFilterPopover($event)"></button>
+  </ion-nav-buttons>
+
+  <ion-header-bar class="bar bar-stable bar-subheader item-input-inset">
+      <div class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input id="searchKey" type="search" placeholder="Search Schedule" ng-model="searchTxt"
+               autocorrect="off" ng-change="setFilter()">
+        <button class="button button-clear" ng-click="clear()">X</button>
+      </div>
+  </ion-header-bar>
+
+  <ion-content class="has-header has-subheader">
+      <ion-list class="list">
+          <label class="item item-input item-select">
+              <div class="input-label pull-right">
+                  <strong>Sort By</strong>
+              </div>
+              <select ng-model="field">
+                  <option value="all" ng-selected=true>All</option>
+                  <option value="title">Title</option>
+                  <option value="speaker">Speaker</option>
+                  <option value="description">Description</option>
+                  <option value="room">Room</option>
+
+              </select>
+          </label>
+
+          <ion-item ng-repeat="session in sessions | filter:search | orderBy: field" type="item-text-wrap" href="#/app/sessions/{{session.$id}}">      
+
+        
+
+          <div class="item-avatar">
+            <img src="pics/{{session.pic}}">
+            <h2> {{session.title}} </h2>
+            <p>{{session.date}}</p>
+          </div>
+
+          <div class="item item-body">
+            <img class="full-image" src="{{session.image}}">
+            <p>
+             {{session.description}}
+            </p>
+            <p>
+              <a href="#" class="subdued">1 Like</a>
+              <a href="#" class="subdued">5 Comments</a>
+            </p>
+          </div>
+
+         
+          <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" ng-click="addFavorite()">
+                    <i class="icon ion-heart" ng-class="{'fave': session.isFave}"></i>
+                    Favorite
+                </a>
+                <a class="tab-item" ng-click="follow()">
+                    <i class="icon ion-social-twitter"></i>
+                    Follow
+                </a>
+                
+                <a class="tab-item" ng-click="share(session)">
+                    <i class="icon ion-social-facebook"></i>
+                    Share
+                </a>
+            </div>
+ 
+        
+      </ion-list>
+  </ion-content>
+</ion-view>

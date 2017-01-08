@@ -1,0 +1,28 @@
+[{
+"id":0,
+"speaker": "First user", 
+"to_user": "Second user",
+"date": "Jan 25, 2016",
+"display_pic": "timkim.jpeg",
+"pic":"timkim.jpeg",
+"image": "http://ionicframework.com/img/docs/delorean.jpg",
+"title": "2222",
+"description": "This is a Facebook styled Card. The header is created from a Thumbnail List item, the content is from a card-body consisting of an image and paragraph text. The footer consists of tabs, icons aligned left, within the card-footer.",          
+      "time":"9:00am",
+      "room":"Ballroom A",
+      "twitter_id":"timkim"
+          },
+
+{"id":1,
+"speaker": "Third user", 
+"to_user": "Second user2",
+"date": "Feb 25, 2013",
+"display_pic": "anis.png",
+"pic": "anis.png",
+"image": "http://www.freedigitalphotos.net/images/img/homepage/87357.jpg",
+"title": "PhoneGap Developer App and the PhoneGap GUI",
+"description": "This presentation will cover the features of the service, focusing on some of our new-ish features such as our oath support, plugins and debugging. There will also be some exclusive sneak peeks of new features revolved around external and private plugins that will hopefully be open for immediate beta testing!  We’ll end on discussing the future and what is on our roadmap in the coming months.",
+ "time":"9:00am",
+      "room":"Ballroom A",
+      "twitter_id":"timkim"
+}]

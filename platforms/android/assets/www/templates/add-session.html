@@ -1,0 +1,36 @@
+<ion-modal-view id="signin-popup" view-title="Sign-In">
+        <ion-content  overflow-scroll="false">
+          
+          <form name="signinForm">
+            <label class="item item-input">
+              <span class="input-label">Username</span>
+              <input placeholder="tst" type="text" ng-model="user.username">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" name="passwordBox" ng-model="user.password" required>
+            </label>
+
+           <!--  <label ng-show="signinForm.$invalid"> your error message</label> -->
+
+
+          
+          <div class="padding">
+            <button id="signinBtn" class="button button-block button-positive" ng-click="signIn(user)"  ng-disabled="signinForm.$invalid">
+              Sign-In
+            </button>
+
+
+            <p class="text-center">
+              <a href="#/forgot-password">Forgot password</a>
+            </p>
+          </div>
+          </form>
+
+          
+        </ion-content>
+
+       
+
+      </ion-modal-view>
+          

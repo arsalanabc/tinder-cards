@@ -1,0 +1,71 @@
+<ion-modal-view id="signin-popup" view-title="Sign-In" hide-nav-bar="true">
+
+        <ion-content  overflow-scroll="false" padding="true" class=" manual-remove-top-padding" >
+          
+          <form name="addsessionFrom"  ng-submit="formSubmit(addsessionForm)">
+            
+        
+          <!--   <ion-item class="range range-positive " id="signIn-range2">Range
+              <input type="range" value="5" min="0" max="100" ng-model="addsessionForm.scale1">
+          </ion-item>
+          <ion-item class="range range-positive " id="signIn-range3">Range
+              <input type="range" value="50" min="0" max="100" ng-model="addsessionForm.scale2">
+          </ion-item>
+          <ion-item class="range range-positive " id="signIn-range4">Range
+              <input type="range" value="50" min="0" max="100" ng-model="addsessionForm.scale3">
+          </ion-item> -->
+            <label class="item item-input " id="signIn-input2"> 
+                <input type="text" placeholder="Title" ng-model="addsessionForm.title">
+            </label>
+            <label class="item item-input " id="signIn-textarea3">                
+                <textarea ng-model="addsessionForm.description" placeholder="Description" style="min-height:150px;"></textarea>
+            </label>
+
+        
+
+          <label>               
+              <select class="ion-input-select--large" ng-model="addsessionForm.select"> 
+                  <option selected value="">Please select one</option>
+                  <option value="words-of-affirmation">Words of Affirmation</option>
+                  <option value="act-of-service">Act of Service</option>
+                  <option value="gift">Gift</option>
+                  <option value="quality-time">Quality Time</option>
+                  <option value="physical-touch">Physical Touch</option>
+              </select>
+          </label>
+                
+
+            <!-- <div style="margin: 0px; line-height: 50px; text-align: center; background-color: rgb(0, 0, 0);">
+                <button class="button button-icon icon ion-camera" ng-click="upload()"></button>
+                <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">
+            </div>
+            -->
+
+           <!--  <label ng-show="signinForm.$invalid"> your error message</label> -->
+
+          
+
+
+          <div class="row"> 
+            <div class="col col-75">
+                <button id="signinBtn" class="button button-block button-positive" ng-click="addsession2()"  ng-disabled="addsessionForm.$invalid">
+                  Sign-In
+                </button>
+            </div>
+            <div class="col col-25">
+                <button id="signinBtn" class="button button-block button-assertive" ng-click="modal.remove()"> Close </button>
+            </div>     
+          </div>
+
+          <div>
+        
+          </div>
+          </form>
+
+          
+        </ion-content>
+
+       
+
+      </ion-modal-view>
+          

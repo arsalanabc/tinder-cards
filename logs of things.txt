@@ -1,0 +1,7 @@
+for testing live JSON object fetching use this url: http://campushappens.com/1/testing/sessions.JSON
+
+search button doesnt work in timeline
+
+floating button in timeline: https://github.com/pregiotek/ion-floating-menu
+
+firebase is defined at the top of the app.js
