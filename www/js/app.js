@@ -1,7 +1,5 @@
-
-
 var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conference.SessionsCtrl', 'conference.SessionCtrl',
-    'conference.FavoritesCtrl', 'conference.ProfileCtrl','ion-floating-menu','ngCordova', 'firebase'])
+    'conference.FavoritesCtrl', 'conference.ProfileCtrl','conference.BalanceCtrl','ion-floating-menu','ngCordova', 'firebase'])
 
 
 
@@ -88,6 +86,16 @@ var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conferen
         'menuContent' :{
           templateUrl: "templates/favorites.html",
           controller: "FavoritesCtrl"
+        }
+      }
+    })
+
+    .state('app.balance', {
+      url: "/balance",
+      views:{
+        'menuContent' :{
+          templateUrl: "templates/balance.html",
+          controller:"BalanceCtrl"
         }
       }
     })
