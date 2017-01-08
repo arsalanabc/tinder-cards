@@ -174,3 +174,31 @@ select {
     width: 450px !important;
     margin-left: -230px !important;
 }
+
+/* Wish list CSS*/
+.wishTable, .wishTable tr {
+    width: 100%;
+}
+.wishTable tr:first-child {
+    vertical-align: middle;
+    width: 15%;
+}
+.wishTable tr:last-child {
+    vertical-align: middle;
+    width: 15%;
+    padding-right: 5px;
+}
+.withTable tr:nth-child(2) {
+    vertical-align: middle;
+    width: 70%;
+    font-size: 50px;
+}
+.padLbl a {
+    cursor: pointer;
+    text-decoration: none;
+    color: gold;
+}
+.wishTable tr:first-child img {
+    width: 50px;
+    height: 50px;
+}

@@ -7,19 +7,19 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
       <!-- No item in the wishlist -->
-        <p class="padLbl" ng-show="favorites.length==0" style="font-size:100px; vertical-align: middle; text-align: center; padding-top:50px;">
-        No items in wishlist. Go <a href="" style="cursor:pointer; text-decoration: none; color:gold;">add</a> some.</p>
+        <p class="padLbl" ng-show="favorites.length==0">
+        No items in wishlist. Go <a href="">add</a> some.</p>
       <!-- Display items -->
       <ion-list show-delete="showDelete" show-reorder="showReorder" can-swipe="listCanSwipe">
         
           <ion-item ng-repeat="favorite in favorites" type="item-text-wrap" class="item-avatar" href="#/app/sessions/{{favorite.id}}">
-            <table style="width:100%;">
-              <tr style="width:100%">
-                <td align="center" style="vertical-align: middle; width:15%;">
-                  <img src="pics/{{favorite.pic}}" style="border-radius: 100%; width:50px; height:50px; "/>
+            <table class="wishTable">
+              <tr>
+                <td align="center">
+                  <img src="pics/{{favorite.pic}}" />
                 </td>
-                <td align="left" style="width: 70%; vertical-align: middle;font-size: 50px">{{favorite.title}}</td>
-                <td align="right" style="vertical-align:middle;width:15%;padding-right:5px;"> {{item.pts}} pts / {{item.totpts}} pts</td>
+                <td align="left">{{favorite.title}}</td>
+                <td align="right"> {{item.pts}} pts / {{item.totpts}} pts</td>
               </tr>
             </table>
             
