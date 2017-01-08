@@ -1,5 +1,5 @@
 angular.module('conference.AppCtrl', ['conference.services'])
-    .controller('AppCtrl', function($scope, $ionicModal, $ionicLoading, $timeout, FacebookService, TwitterService, LinkedInService) {
+    .controller('AppCtrl', function($scope, $state, $ionicModal, $ionicLoading, $timeout, FacebookService, TwitterService, LinkedInService) {
     console.log("App ctrl initialize");
 
     // Init the login modal
@@ -29,7 +29,7 @@ angular.module('conference.AppCtrl', ['conference.services'])
     };
 
     // Basic Login Handling - invoke a check for userid and pw being valued but nothing beyond a message
-    $scope.doLogin = function() {
+    $scope.doLogin = function($state) {
         if ($scope.loginData.username!=undefined && $scope.loginData.password!=undefined) {
             // Simulate authentication check - roll your own here instead of success timeout :)
             $timeout(function() {
@@ -37,6 +37,8 @@ angular.module('conference.AppCtrl', ['conference.services'])
             }, 1000);
             $scope.loginMsg = "Login successful!";
             $scope.login.result = true;
+            $state.go('/sessions');
+            
         }
         else {
             $scope.loginMsg = "Please enter a valid username and password.";

@@ -122,6 +122,16 @@ var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conferen
         }      
     })
 
+     .state('app.landingpage', {
+      url: "/landingpage",
+      views: {
+          'menuContent': {
+              templateUrl: "templates/landingpage.html",
+              controller: "SessionsCtrl"
+          }
+        }      
+    })
+
     .state('app.session', {
       url: "/sessions/:sessionId",
       views: {
@@ -132,5 +142,5 @@ var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conferen
       }
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/sessions');
+    $urlRouterProvider.otherwise('app/sessions');
 });
