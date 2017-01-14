@@ -1,5 +1,5 @@
 var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conference.SessionsCtrl', 'conference.SessionCtrl',
-    'conference.FavoritesCtrl', 'conference.ProfileCtrl','conference.BalanceCtrl','ion-floating-menu','ngCordova', 'firebase'])
+    'conference.FavoritesCtrl', 'conference.ProfileCtrl','conference.BalanceCtrl','ion-floating-menu','ngCordova', 'firebase','conference.TPCtrl'])
 
 
 
@@ -43,8 +43,7 @@ var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conferen
 
 .config(function($stateProvider, $urlRouterProvider) {
   //Facebook integration - Register your app and get your App ID from http://developer.facebook.com
-  openFB.init({appId: 'your-app-id'});
-
+  
 
         $stateProvider
     .state('app.profile', {
@@ -140,6 +139,16 @@ var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conferen
         }      
     })
 
+    .state('app.testingpage', {
+      url: "/testingpage",
+      views: {
+          'menuContent': {
+              templateUrl: "templates/testingpage.html",
+              controller: "TPCtrl"
+          }
+        }      
+    })
+
     .state('app.session', {
       url: "/sessions/:sessionId",
       views: {
@@ -150,5 +159,5 @@ var app = angular.module('conference', ['ionic', 'conference.AppCtrl', 'conferen
       }
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('app/sessions');
+    $urlRouterProvider.otherwise('app/testingpage');
 });
